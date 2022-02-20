@@ -6,6 +6,9 @@ const symbols=["+","-","*","/"];
 button.forEach((btn)=>{
 btn.addEventListener("click",()=>{
 
+    displayElm.style.backgroundColor ="";
+
+
     const val=btn.innerText;
     const lsatChar=textToDisplay[textToDisplay.length-1];
 
@@ -65,6 +68,17 @@ const display=(toDisplay)=>{
 
 const onTotal=()=>{
 const prankNum=randomNumber();
+
+if(prankNum > 0){
+    displayElm.style.backgroundColor ="red";
+
+    displayElm.classList.add("prank");
+
+    displayElm.addEventListener("animationend",()=>{
+        displayElm.classList.remove("prank");
+    })
+}
+
     const total=eval(textToDisplay) + prankNum;
 
 

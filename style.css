@@ -95,3 +95,25 @@ body{
 .no-0{grid-area:no0 ;}
 .no-dot{grid-area:dot ;}
 .ans{grid-area: ans;}
+
+.prank{
+    animation:shake 0.3s ease-in;
+   
+}
+@keyframes shake {
+    0%{
+        transform: translate(100px);
+    }
+
+    50%{
+        transform: translate(-100px);
+    }
+
+    75%{
+        transform: translate(100px);
+    }
+    
+    100%{
+        transform: translate(100px);
+    }   
+}
